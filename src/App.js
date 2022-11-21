@@ -41,12 +41,12 @@ export default function App() {
       })
     })
   }, [])
-  // update the form state as the user types
+
   function onChange(e) {
     setForm({ ...formState, [e.target.name]: e.target.value  })
   }
 
-  // set a new message in gun, update the local state to reset the form field
+  
   function saveMessage() {
     const messages = gun.get('messages')
     messages.set({
